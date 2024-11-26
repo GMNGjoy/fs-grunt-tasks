@@ -1,0 +1,8 @@
+*.zip
+Giants/
+_assets/
+github/
+node_modules/
+private/
+screenshots/
+youtube/
