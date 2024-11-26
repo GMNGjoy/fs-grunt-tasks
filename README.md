@@ -91,13 +91,23 @@ minorVersion:   3
 patchVersion:   4
 ```
 
-by default, the `bump` command will do a "patch" version bump. If you'd like to alter (at runtime) which type of version to bump, you can provide the `--ver` option
+by default, the `bump` command will do a "patch" version bump. 
 
 ```
+// version: 1.0.0.1
+C:/mods/FS25_TestMod $> gulp bump
+// version: 1.0.0.2
+```
+
+If you'd like to alter (at runtime) which type of version to bump, you can provide the `--ver` option
+
+```
+// version: 1.0.0.1
 C:/mods/FS25_TestMod $> gulp bump --ver major
+// version: 1.1.0.0
 ```
 
-which will do a major version bump instead. the options for `ver` are `release | major | minor | patch`
+which will do a major version bump instead (resetting lower versions to 0). the options for `ver` are `release | major | minor | patch`
 
 `bump` can also be run in conjunction with either `build` or `testRun` by providing the `--bump` option, which will happen as part of the `prepare` phase.
 
